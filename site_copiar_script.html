@@ -1,46 +1,36 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 <head>
-<meta charset="UTF-8">
 <title>Copiar Script</title>
 <style>
 body{
-    background:black;
-    color:#00ff00;
-    font-family:monospace;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    margin:0;
-}
-pre{
-    background:#111;
-    padding:20px;
-    border-radius:10px;
-    font-size:16px;
-    max-width:90%;
-    overflow:auto;
+background:black;
+color:#00ff00;
+font-family:monospace;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
 }
 button{
-    margin-top:20px;
-    padding:12px 25px;
-    font-size:16px;
-    cursor:pointer;
+padding:15px;
+font-size:18px;
 }
 </style>
 </head>
+
 <body>
 
-<pre id="script">loadstring(game:HttpGet("https://raw.githubusercontent.com/gumanba/Scripts/main/BeaLuckyBlock"))()</pre>
-<button onclick="copyScript()">Copiar Script</button>
+<p>loadstring(game:HttpGet("https://raw.githubusercontent.com/gumanba/Scripts/main/BeaLuckyBlock"))()</p>
+
+<button onclick="copy()">Copiar Script</button>
 
 <script>
-function copyScript(){
-  const text = document.getElementById("script").innerText;
-  navigator.clipboard.writeText(text);
-  alert("Script copiado!");
+function copy(){
+navigator.clipboard.writeText('loadstring(game:HttpGet("https://raw.githubusercontent.com/gumanba/Scripts/main/BeaLuckyBlock"))()');
+alert("Script copiado!");
 }
 </script>
 
