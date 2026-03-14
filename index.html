@@ -1,1 +1,39 @@
-# Script-
+<!DOCTYPE html>
+<html>
+<head>
+<title>Copiar Script</title>
+<style>
+body{
+background:black;
+color:#00ff00;
+font-family:monospace;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+}
+button{
+padding:15px;
+font-size:18px;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<p>loadstring(game:HttpGet("https://raw.githubusercontent.com/gumanba/Scripts/main/BeaLuckyBlock"))()</p>
+
+<button onclick="copy()">Copiar Script</button>
+
+<script>
+function copy(){
+navigator.clipboard.writeText('loadstring(game:HttpGet("https://raw.githubusercontent.com/gumanba/Scripts/main/BeaLuckyBlock"))()');
+alert("Script copiado!");
+}
+</script>
+
+</body>
+</html>
